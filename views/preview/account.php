@@ -70,6 +70,3 @@ $formatter = Yii::$app->formatter;
         </div>
     </div>
 </div>
-<footer class="footer no-print">
-    <?= \app\modules\admin\widgets\PoweredBy::widget() ?>
-</footer>

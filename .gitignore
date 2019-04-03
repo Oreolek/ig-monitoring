@@ -31,3 +31,4 @@ tests/_support/_generated
 
 config/authClientCollection.php
 config/db.php
+config/params.php

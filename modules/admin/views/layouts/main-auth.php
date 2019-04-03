@@ -29,11 +29,6 @@ dmstr\web\AdminLteAsset::register($this);
     <div class="login-box-body">
         <?= $content ?>
     </div>
-    <div>
-        <p class="margin text-center">
-            <?= \app\modules\admin\widgets\PoweredBy::widget() ?>
-        </p>
-    </div>
 </div>
 
 <?php $this->endBody() ?>
