@@ -7,9 +7,15 @@ use yii\widgets\ActiveForm;
 /* @var $model app\models\Tag */
 
 $this->title = "{$model->namePrefixed} :: Statistics";
-$this->params['breadcrumbs'][] = ['label' => 'Monitoring', 'url' => ['monitoring/tags']];
-$this->params['breadcrumbs'][] = ['label' => $model->namePrefixed, 'url' => ['stats', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Statistics';
+$this->params['breadcrumbs'][] = [
+    'label' => \Yii::t('app', 'Monitoring'),
+    'url' => ['monitoring/tags']
+];
+$this->params['breadcrumbs'][] = [
+    'label' => $model->namePrefixed,
+    'url' => ['stats', 'id' => $model->id]
+];
+$this->params['breadcrumbs'][] = \Yii::t('app', 'Statistics');
 
 $formatter = Yii::$app->formatter;
 $lastTagStats = $model->lastTagStats;
@@ -31,18 +37,18 @@ $lastTagStats = $model->lastTagStats;
                             <?= $form->field($model, 'disabled')->checkbox() ?>
 
                             <div class="form-group">
-                                <?= Html::submitButton('Update', ['class' => 'btn btn-success']) ?>
+                                <?= Html::submitButton(\Yii::t('app', 'Update'), ['class' => 'btn btn-success']) ?>
                             </div>
 
                             <?php ActiveForm::end() ?>
                         </div>
                         <div class="col-lg-4 col-lg-offset-2">
                             <p>
-                                <?= Html::a('Delete statistics history', ['tag/delete-stats', 'id' => $model->id], [
+                                <?= Html::a(\Yii::t('app', 'Delete statistics history'), ['tag/delete-stats', 'id' => $model->id], [
                                     'class' => 'btn btn-danger',
                                     'data' => [
                                         'method' => 'post',
-                                        'confirm' => 'Statistical data will be permanently deleted, are you sure?',
+                                        'confirm' => \Yii::t('app', 'Statistical data will be permanently deleted, are you sure?'),
                                     ],
                                 ]) ?>
                             </p>

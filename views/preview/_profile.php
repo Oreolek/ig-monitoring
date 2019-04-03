@@ -66,7 +66,7 @@ $lastAccountStats = $model->lastAccountStats;
 
 <div class="box box-primary">
     <div class="box-header with-border">
-        <h3 class="box-title">Description</h3>
+        <h3 class="box-title"><?= \Yii::t('app', 'Description') ?></h3>
     </div>
     <div class="box-body">
         <?php if ($model->external_url): ?>

@@ -71,9 +71,9 @@ $user = Yii::$app->user->identity;
             <?= dmstr\widgets\Menu::widget([
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget' => 'tree'],
                 'items' => [
-                    ['label' => 'Menu', 'options' => ['class' => 'header']],
-                    ['label' => 'Monitoring', 'icon' => 'line-chart', 'url' => ['/admin/monitoring/accounts'], 'active' => $this->context->id == 'monitoring'],
-                    ['label' => 'Proxy', 'icon' => 'shield', 'url' => ['/admin/proxy/index'], 'active' => $this->context->id == 'proxy'],
+                    ['label' => \Yii::t('app', 'Menu'), 'options' => ['class' => 'header']],
+                    ['label' => \Yii::t('app', 'Monitoring'), 'icon' => 'line-chart', 'url' => ['/admin/monitoring/accounts'], 'active' => $this->context->id == 'monitoring'],
+                    ['label' => \Yii::t('app', 'Proxy'), 'icon' => 'shield', 'url' => ['/admin/proxy/index'], 'active' => $this->context->id == 'proxy'],
                 ],
             ]) ?>
 

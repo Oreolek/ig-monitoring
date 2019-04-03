@@ -10,6 +10,8 @@ $config = [
     'name' => 'IG Monitoring',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language' => $params['language'] ?? 'en-US',
+    'sourceLanguage' => 'en-US',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm' => '@vendor/npm-asset',
@@ -68,6 +70,19 @@ $config = [
                     'class' => \yii\rest\UrlRule::class,
                     'controller' => ['v1/account'],
                     'only' => ['create', 'index'],
+                ],
+            ],
+        ],
+        'i18n' => [
+            'translations' => [
+                'app' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'sourceLanguage' => 'en-US',
+                    'fileMap' => [
+                        'app' => 'app.php',
+                        // 'app/error' => 'error.php',
+                    ],
                 ],
             ],
         ],
